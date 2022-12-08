@@ -21,7 +21,7 @@ const Register = () => {
     // Store object data into variable
     const { username, email, password } = user;
     try {
-      const res = await fetch("/register", {
+      const res = await fetch(`${process.env.REACT_APP_SERVER_URL}/register`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
