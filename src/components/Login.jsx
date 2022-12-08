@@ -33,7 +33,7 @@ const Login = () => {
       } else {
         window.alert("Login Successfull");
         window.location.reload();
-        navigate(`${process.env.REACT_APP_URL}/`);
+        navigate("/");
         // Token is generated when we logged in.
       }
     } catch (error) {

@@ -19,7 +19,7 @@ const Logout = () => {
       if (res.status === 401 || !res) {
         window.alert("Please logout later.");
       } else {
-        navigate(`${process.env.REACT_APP_URL}/`);
+        navigate("/");
         window.location.reload();
       }
     } catch (error) {
