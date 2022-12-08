@@ -21,17 +21,20 @@ const Register = () => {
     // Store object data into variable
     const { username, email, password } = user;
     try {
-      const res = await fetch(`${process.env.REACT_APP_SERVER_URL}/register`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          username,
-          email,
-          password,
-        }),
-      });
+      const res = await fetch(
+        `${process.env.REACT_APP_SERVER_URL}/api/register`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            username,
+            email,
+            password,
+          }),
+        }
+      );
       if (res.status === 400 || !res) {
         window.alert("Already used details");
       } else {

@@ -7,14 +7,17 @@ const Logout = () => {
 
   const logout = async () => {
     try {
-      const res = await fetch(`${process.env.REACT_APP_SERVER_URL}/logout`, {
-        method: "GET",
-        headers: {
-          Accept: "application/json",
-          "Content-Type": "application/json",
-        },
-        credentials: "include",
-      });
+      const res = await fetch(
+        `${process.env.REACT_APP_SERVER_URL}/api/logout`,
+        {
+          method: "GET",
+          headers: {
+            Accept: "application/json",
+            "Content-Type": "application/json",
+          },
+          credentials: "include",
+        }
+      );
 
       if (res.status === 401 || !res) {
         window.alert("Please logout later.");

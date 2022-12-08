@@ -17,7 +17,7 @@ const Login = () => {
     event.preventDefault();
     const { email, password } = user;
     try {
-      const res = await fetch(`${process.env.REACT_APP_SERVER_URL}/login`, {
+      const res = await fetch(`${process.env.REACT_APP_SERVER_URL}/api/login`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -32,8 +32,8 @@ const Login = () => {
         window.alert("Invalid Credentials");
       } else {
         window.alert("Login Successfull");
-        window.location.reload();
         navigate("/");
+        // window.location.reload();
         // Token is generated when we logged in.
       }
     } catch (error) {
