@@ -36,7 +36,7 @@ const Register = () => {
         window.alert("Already used details");
       } else {
         window.alert("Registered Successfully");
-        navigate("/login");
+        navigate(`${process.env.REACT_APP_URL}/login`);
       }
     } catch (error) {
       console.log(error);
