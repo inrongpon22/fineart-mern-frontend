@@ -7,7 +7,7 @@ const Logout = () => {
 
   const logout = async () => {
     try {
-      const res = await fetch(`${process.env.REACT_APP_SERVER_URL}/logout`, {
+      const res = await fetch("/logout", {
         method: "GET",
         headers: {
           Accept: "application/json",

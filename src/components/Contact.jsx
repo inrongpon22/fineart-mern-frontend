@@ -21,7 +21,7 @@ const Contact = () => {
     // Store object data into variable
     const { name, email, message } = msg;
     try {
-      const res = await fetch(`${process.env.REACT_APP_SERVER_URL}/message`, {
+      const res = await fetch("/message", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
